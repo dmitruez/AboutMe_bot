@@ -1,0 +1,9 @@
+{
+  "buttons": {
+    "info": [["Узнать больше обо мне", "Find out more about me"], "info"],
+    "language": [["Русский", "English"], "language"],
+    "back": [["Назад", "Back"], "back"],
+    "change_language": [["Изменить язык", "Change the language"], "change"],
+    "question_to_me": [["Задать мне вопрос", "Ask me a question"], "question"]
+  }
+}
