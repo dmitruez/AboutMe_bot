@@ -5,28 +5,28 @@ class RepoJSON:
 	FILE = 'config.json'
 	
 	
-	def button(self, name: str, lang: str) -> tuple:
-		if lang == 'ru':
-			with open(self.FILE, 'r', encoding='utf-8') as f:
-				button = json.load(f)['buttons'][name]['ru']
-				call_data = json.load(f)['buttons'][name]['call_data']
-		
-		else:
-			with open(self.FILE, 'r', encoding='utf-8') as f:
-				button = json.load(f)['buttons'][name]['en']
-				call_data = json.load(f)['buttons'][name]['call_data']
-		
-		return call_data, button
+	def button_info(self, name: str, lang: str) -> tuple:
+		with open(self.FILE, 'r', encoding='utf-8') as f:
+			data = json.load(f)['buttons'][name]
+			if lang == 'ru':
+				text = data['ru']
+				call_data = data['call_data']
 	
+			else:
+				text = data['en']
+				call_data = data['call_data']
+		
+		return call_data, text
+		
 	
 	def information(self, lang: str) -> list:
-		if lang == 'ru':
-			with open(self.FILE, 'r', encoding='utf-8') as f:
-				info = json.load(f)['information']['ru']
-		
-		else:
-			with open(self.FILE, 'r', encoding='utf-8') as f:
-				info = json.load(f)['information']['en']
+		with open(self.FILE, 'r', encoding='utf-8') as f:
+			data = json.load(f)['information']
+			if lang == 'ru':
+				info = data['ru']
+	
+			else:
+				info = data['en']
 		
 		return info
 	
@@ -39,12 +39,20 @@ class RepoJSON:
 	
 	
 	def fist_greetings(self, lang):
-		if lang == 'ru':
-			with open(self.FILE, 'r', encoding='utf-8') as f:
-				greetings = json.load(f)['about_bot']['greetings']['ru']
-		
-		else:
-			with open(self.FILE, 'r', encoding='utf-8') as f:
-				greetings = json.load(f)['about_bot']['greetings']['en']
+		with open(self.FILE, 'r', encoding='utf-8') as f:
+			data = json.load(f)['about_bot']['greetings']
+			if lang == 'ru':
+				greetings = data['ru']
+	
+			else:
+				greetings = data['en']
 		
 		return greetings
+	
+
+repo = RepoJSON()
+
+# print(repo.button_info('question_to_me', 'ru'))
+# print(repo.information('ru'))
+# print(repo.fist_greetings('ru'))
+# print(repo.token())

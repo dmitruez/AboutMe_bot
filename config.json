@@ -44,8 +44,8 @@
   "about_bot": {
     "TOKEN": "6601520126:AAH9h80gj8MupbWT5-In4iTDDi1TfTJevRI",
     "greetings": {
-      "ru": "Привет заинтересованный пользователь!\n\nЭто мой бот, он даст тебе больше информации обо мне чем на сайтах,<b>ТАКЖЕ</b> продемонстрирует мою практическую работу с телеграм ботами, если я вас заинтересую, то просто нажмите на кнопку <b>Задать мне вопрос</b>",
-      "en": "Hello, interested user!\n\nThis is my bot, it will give you more information about me than on the sites,<b>ALSO<b>it will demonstrate my practical work with telegram bots, if I interest you, just click on the button<b >Ask me a question<b>"
+      "ru": "Привет заинтересованный пользователь!\n\nЭто мой бот, он даст тебе больше информации обо мне чем на сайтах\n<b>ТАКЖЕ</b> продемонстрирует мою практическую работу с телеграм ботами, если я вас заинтересую, то просто нажмите на кнопку",
+      "en": "Hello, interested user!\n\nThis is my bot, it will give you more information about me than on the sites\n<b>ALSO<b>it will demonstrate my practical work with telegram bots, if I interest you, just click on the button"
     }
   }
 }
