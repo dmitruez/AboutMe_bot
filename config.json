@@ -1,33 +1,51 @@
 {
   "buttons": {
-    "info": ["Узнать больше обо мне", "Find out more about me"],
-    "language": ["Русский", "English"],
-    "back": ["Назад", "Back"],
-    "change_language": ["Изменить язык", "Change the language"],
-    "question_to_me": ["Задать мне вопрос", "Ask me a question"],
-    "next_fact": ["Следующий факт обо мне", "Next fact about me"],
-    "previous_fact": ["Предыдущий факт обо мне", "Previous fact about me"]
+    "show_information": {
+      "ru": "Узнать больше обо мне",
+      "en": "Find out more about me",
+      "call_data": "info"
+    },
+    "question_to_me": {
+      "ru": "Задать мне вопрос",
+      "en": "Ask me a question",
+      "call_data": "question"
+    },
+    "next_fact": {
+      "ru": "Следующий факт обо мне",
+      "en": "Next fact about me",
+      "call_data": "next"
+    },
+    "previous_fact": {
+      "ru": "Предыдущий факт обо мне",
+      "en": "Previous fact about me",
+      "call_data": "back"
+    }
   },
-  "information": [
-    ["Я занимаюсь каратэ с 6 лет и не планирую завершать этот путь, как подработка тренером хороший вариант",
-      "I’ve been doing karate since I was 6 years old and I don’t plan to end this path, but working as a part-time coach is a good option"],
-
-    ["Я учусь в 10 классе и моя мечта быть творческой личностью, со своими идеями и их реализацией",
-      "I am in 10th grade and my dream is to be a creative person, with my own ideas and their implementation"],
-
-    ["Я уже в таком возрасте беру заказы с фриланса и стараюсь сделать всё, что бы клиенту понравилось",
-      "At this age I’m already taking orders from freelancers and I try to do everything that the client would like"],
-
-    ["Я коплю деньги на съемную квартиру, что бы к 18 годам уже жить отдельно от родителей",
-      "I am saving money for a rented apartment so that by the age of 18 I can live separately from my parents"],
-
-    ["Я хочу получить свою первую работу в компании на удаленку, раюотать через github",
-      "I want to get my first job in a company remotely, via github"],
-
-    ["Я создал этого бота только потому, что в реалях все боятся молодых разработчиков, каждый учится, а я доказываю всем что уже готов",
-    "I created this bot only because in real life everyone is afraid of young developers, everyone is learning, and I prove to everyone that I am ready"],
-
-    ["Я считаю, что каждый если не будет смотреть на других будет развиваться быстрее их, и становится индивидуальней со своим стилем",
-    "I believe that if everyone does not look at others, they will develop faster than them, and become more individual with their own style"]
-  ]
+  "information": {
+    "ru": [
+      "Я занимаюсь каратэ с 6 лет и не планирую завершать этот путь, как подработка тренером хороший вариант",
+      "Я учусь в 10 классе и моя мечта быть творческой личностью, со своими идеями и их реализацией",
+      "Я уже в таком возрасте беру заказы с фриланса и стараюсь сделать всё, что бы клиенту понравилось",
+      "Я коплю деньги на съемную квартиру, что бы к 18 годам уже жить отдельно от родителей",
+      "Я хочу получить свою первую работу в компании на удаленку, раюотать через github",
+      "Я создал этого бота только потому, что в реалях все боятся молодых разработчиков, каждый учится, а я доказываю всем что уже готов",
+      "Я считаю, что каждый если не будет смотреть на других будет развиваться быстрее их, и становится индивидуальней со своим стилем"
+    ],
+    "en": [
+      "I’ve been doing karate since I was 6 years old and I don’t plan to end this path, but working as a part-time coach is a good option",
+      "I am in 10th grade and my dream is to be a creative person, with my own ideas and their implementation",
+      "At this age I’m already taking orders from freelancers and I try to do everything that the client would like",
+      "I am saving money for a rented apartment so that by the age of 18 I can live separately from my parents",
+      "I want to get my first job in a company remotely, via github",
+      "I created this bot only because in real life everyone is afraid of young developers, everyone is learning, and I prove to everyone that I am ready",
+      "I believe that if everyone does not look at others, they will develop faster than them, and become more individual with their own style"
+    ]
+  },
+  "about_bot": {
+    "TOKEN": "6601520126:AAH9h80gj8MupbWT5-In4iTDDi1TfTJevRI",
+    "greetings": {
+      "ru": "Привет заинтересованный пользователь!\n\nЭто мой бот, он даст тебе больше информации обо мне чем на сайтах,<b>ТАКЖЕ</b> продемонстрирует мою практическую работу с телеграм ботами, если я вас заинтересую, то просто нажмите на кнопку <b>Задать мне вопрос</b>",
+      "en": "Hello, interested user!\n\nThis is my bot, it will give you more information about me than on the sites,<b>ALSO<b>it will demonstrate my practical work with telegram bots, if I interest you, just click on the button<b >Ask me a question<b>"
+    }
+  }
 }
