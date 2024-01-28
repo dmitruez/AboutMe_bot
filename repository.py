@@ -1,39 +1,50 @@
 import json
 
 
-languages = {
-	"rus": 0,
-	"eng": 1
-	}
-
 class RepoJSON:
 	FILE = 'config.json'
 	
 	
-	def button(self, call_data: str, lang: str) -> tuple:
-		"""
+	def button(self, name: str, lang: str) -> tuple:
+		if lang == 'ru':
+			with open(self.FILE, 'r', encoding='utf-8') as f:
+				button = json.load(f)['buttons'][name]['ru']
+				call_data = json.load(f)['buttons'][name]['call_data']
 		
-		:param call_data: The call_data in the json file
-		:param lang: The language of the button name
-		:return: returns also call_data and button name
+		else:
+			with open(self.FILE, 'r', encoding='utf-8') as f:
+				button = json.load(f)['buttons'][name]['en']
+				call_data = json.load(f)['buttons'][name]['call_data']
 		
-		"""
-		
-		with open(self.FILE, 'r', encoding='utf-8') as f:
-			button = json.load(f)['buttons'][call_data][languages[lang]]
-			
-			return call_data, button
+		return call_data, button
 	
 	
 	def information(self, lang: str) -> list:
-		"""
+		if lang == 'ru':
+			with open(self.FILE, 'r', encoding='utf-8') as f:
+				info = json.load(f)['information']['ru']
 		
-		:param lang: The language of information
-		:return: Information about me
+		else:
+			with open(self.FILE, 'r', encoding='utf-8') as f:
+				info = json.load(f)['information']['en']
 		
-		"""
-		
+		return info
+	
+	
+	def token(self):
 		with open(self.FILE, 'r', encoding='utf-8') as f:
-			info_ = json.load(f)['information']
-			info = list(map(lambda m: m[languages[lang]], info_))
-			return info
+			token = json.load(f)['about_bot']['TOKEN']
+		
+		return token
+	
+	
+	def fist_greetings(self, lang):
+		if lang == 'ru':
+			with open(self.FILE, 'r', encoding='utf-8') as f:
+				greetings = json.load(f)['about_bot']['greetings']['ru']
+		
+		else:
+			with open(self.FILE, 'r', encoding='utf-8') as f:
+				greetings = json.load(f)['about_bot']['greetings']['en']
+		
+		return greetings
