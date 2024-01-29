@@ -1,25 +1,28 @@
-import telebot
+import asyncio
+import logging
+
+from aiogram import Bot, Dispatcher
+from aiogram.enums.parse_mode import ParseMode
+from aiogram.fsm.storage.memory import MemoryStorage
 from repository import RepoJSON
-from telebot import types
+from handlers import router
 
 
 repo = RepoJSON()
 TOKEN = repo.token()
 
-bot = telebot.TeleBot(TOKEN, parse_mode='html')
 
-
-@bot.message_handler(commands=['start'])
-def greetings(message):
-	lang = message.from_user.language_code
+async def main():
+	bot = Bot(token=TOKEN, parse_mode=ParseMode.HTML)
+	dp = Dispatcher(storage=MemoryStorage())
+	dp.include_router(router)
+	await bot.delete_webhook(drop_pending_updates=True)
+	await dp.start_polling(bot, allowed_updates=dp.resolve_used_update_types())
 	
-	call_data, text = repo.button_info('question_to_me', lang)
-	button = types.InlineKeyboardButton(text=text, callback_data=call_data)
-	markup = types.InlineKeyboardMarkup()
-	markup.add(button)
-	
-	bot.send_message(message.from_user.id, text=repo.fist_greetings(lang), reply_markup=markup)
 	
 
-bot.infinity_polling()
+
+if __name__ == '__main__':
+	logging.basicConfig(level=logging.INFO)
+	asyncio.run(main())
 

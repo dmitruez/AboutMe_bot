@@ -5,7 +5,7 @@ class RepoJSON:
 	FILE = 'config.json'
 	
 	
-	def button_info(self, name: str, lang: str) -> tuple:
+	def button_info(self, name: str, lang: str) -> tuple or str:
 		with open(self.FILE, 'r', encoding='utf-8') as f:
 			data = json.load(f)['buttons'][name]
 			if lang == 'ru':
@@ -49,6 +49,17 @@ class RepoJSON:
 		
 		return greetings
 	
+	
+	def text_question(self, lang):
+		with open(self.FILE, 'r', encoding='utf-8') as f:
+			data = json.load(f)['about_bot']['text_question']
+			if lang == 'ru':
+				question = data['ru']
+			
+			else:
+				question = data['en']
+		
+		return question
 
 repo = RepoJSON()
 

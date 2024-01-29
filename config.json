@@ -11,41 +11,50 @@
       "call_data": "question"
     },
     "next_fact": {
-      "ru": "Следующий факт обо мне",
-      "en": "Next fact about me",
-      "call_data": "next"
+      "ru": "Следующий факт",
+      "en": "Next fact",
+      "call_data": "to "
     },
     "previous_fact": {
-      "ru": "Предыдущий факт обо мне",
-      "en": "Previous fact about me",
-      "call_data": "back"
+      "ru": "Предыдущий факт",
+      "en": "Previous fact",
+      "call_data": "to "
+    },
+    "reply_to_message": {
+      "ru": "Ответить на сообщение",
+      "en": "Reply to message",
+      "call_data": "reply"
     }
   },
   "information": {
     "ru": [
-      "Я занимаюсь каратэ с 6 лет и не планирую завершать этот путь, как подработка тренером хороший вариант",
-      "Я учусь в 10 классе и моя мечта быть творческой личностью, со своими идеями и их реализацией",
-      "Я уже в таком возрасте беру заказы с фриланса и стараюсь сделать всё, что бы клиенту понравилось",
-      "Я коплю деньги на съемную квартиру, что бы к 18 годам уже жить отдельно от родителей",
-      "Я хочу получить свою первую работу в компании на удаленку, раюотать через github",
-      "Я создал этого бота только потому, что в реалях все боятся молодых разработчиков, каждый учится, а я доказываю всем что уже готов",
-      "Я считаю, что каждый если не будет смотреть на других будет развиваться быстрее их, и становится индивидуальней со своим стилем"
+      "<b>Я занимаюсь каратэ с 6 лет и не планирую завершать этот путь</b>\n\nКак подработка тренером хороший вариант",
+      "<b>Я учусь в 10 классе и моя мечта быть творческой личностью</b>\n\nСо своими идеями и их реализацией",
+      "<b>Я уже в таком возрасте беру заказы с фриланса</b>\n\nИ стараюсь сделать всё, что бы клиенту понравилось",
+      "<b>Я коплю деньги на съемную квартиру</b>\n\nЧто бы к 18 годам уже жить отдельно от родителей",
+      "<b>Я хочу получить свою первую работу в компании на удаленку</b>\n\nРаботать через github",
+      "<b>Я создал этого бота только потому, что в реалях все боятся молодых разработчиков</b>\n\nКаждый учится, а я доказываю всем что уже готов",
+      "<b>Я считаю, что каждый если не будет смотреть на других</b>\n\nБудет развиваться быстрее их, и становится индивидуальней со своим стилем"
     ],
     "en": [
-      "I’ve been doing karate since I was 6 years old and I don’t plan to end this path, but working as a part-time coach is a good option",
-      "I am in 10th grade and my dream is to be a creative person, with my own ideas and their implementation",
-      "At this age I’m already taking orders from freelancers and I try to do everything that the client would like",
-      "I am saving money for a rented apartment so that by the age of 18 I can live separately from my parents",
-      "I want to get my first job in a company remotely, via github",
-      "I created this bot only because in real life everyone is afraid of young developers, everyone is learning, and I prove to everyone that I am ready",
-      "I believe that if everyone does not look at others, they will develop faster than them, and become more individual with their own style"
+      "<b>I’ve been doing karate since I was 6 years old and I don’t plan to end this path</b>\n\nWorking as a part-time coach is a good option",
+      "<b>I am in 10th grade and my dream is to be a creative person</b>\n\nWith my own ideas and their implementation",
+      "<b>At this age I’m already taking orders from freelancers</b>\n\nI try to do everything that the client would like",
+      "<b>I am saving money for a rented apartment</b>\n\nSo that by the age of 18 I can live separately from my parents",
+      "<b>I want to get my first job in a company remotely</b>\n\nVia github",
+      "<b>I created this bot only because in real life everyone is afraid of young developersn</b>\n\nEveryone is learning, and I prove to everyone that I am ready",
+      "<b>I believe that if everyone does not look at others</b>\n\nThey will develop faster than them, and become more individual with their own style"
     ]
   },
   "about_bot": {
     "TOKEN": "6601520126:AAH9h80gj8MupbWT5-In4iTDDi1TfTJevRI",
     "greetings": {
-      "ru": "Привет заинтересованный пользователь!\n\nЭто мой бот, он даст тебе больше информации обо мне чем на сайтах\n<b>ТАКЖЕ</b> продемонстрирует мою практическую работу с телеграм ботами, если я вас заинтересую, то просто нажмите на кнопку",
-      "en": "Hello, interested user!\n\nThis is my bot, it will give you more information about me than on the sites\n<b>ALSO<b>it will demonstrate my practical work with telegram bots, if I interest you, just click on the button"
+      "ru": "<b>Привет заинтересованный пользователь!</b>\n\nЭто мой бот, он даст тебе больше информации обо мне чем на сайтах\n\n<strong>ТАКЖЕ</strong> продемонстрирует мою практическую работу с телеграм ботами\n\n<i>Если я вас заинтересую, то просто нажмите на кнопку</i>",
+      "en": "<b>Hello, interested user!</b>\n\nThis is my bot, it will give you more information about me than on the sites\n\n<strong>ALSO</strong>it will demonstrate my practical work with telegram bots\n\n<i>If I interest you, just click on the button</i>"
+    },
+    "text_question": {
+      "ru": "<b>Теперь задайте интересующий вас вопрос</b>\n\nБот доставит это сообщение до меня",
+      "en": "<b>Now ask the question you are interested in</b>\n\nThe bot will deliver this message to me"
     }
   }
 }
