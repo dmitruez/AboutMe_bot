@@ -24,6 +24,11 @@
       "ru": "Ответить на сообщение",
       "en": "Reply to message",
       "call_data": "reply"
+    },
+    "to_main": {
+      "ru": "Вернутся на главную",
+      "en": "Return to home page",
+      "call_data": "return"
     }
   },
   "information": {
@@ -48,13 +53,15 @@
   },
   "about_bot": {
     "TOKEN": "6601520126:AAH9h80gj8MupbWT5-In4iTDDi1TfTJevRI",
-    "greetings": {
-      "ru": "<b>Привет заинтересованный пользователь!</b>\n\nЭто мой бот, он даст тебе больше информации обо мне чем на сайтах\n\n<strong>ТАКЖЕ</strong> продемонстрирует мою практическую работу с телеграм ботами\n\n<i>Если я вас заинтересую, то просто нажмите на кнопку</i>",
-      "en": "<b>Hello, interested user!</b>\n\nThis is my bot, it will give you more information about me than on the sites\n\n<strong>ALSO</strong>it will demonstrate my practical work with telegram bots\n\n<i>If I interest you, just click on the button</i>"
-    },
-    "text_question": {
-      "ru": "<b>Теперь задайте интересующий вас вопрос</b>\n\nБот доставит это сообщение до меня",
-      "en": "<b>Now ask the question you are interested in</b>\n\nThe bot will deliver this message to me"
+    "bot_text": {
+      "greetings": {
+        "ru": "<b>Привет заинтересованный пользователь!</b>\n\nЭто мой бот, который лежит на моей странице <a href='https://github.com/dmitruez'>github</a> он даст тебе больше информации обо мне чем на сайтах\n\n<strong>ТАКЖЕ</strong> продемонстрирует мою практическую работу с телеграм ботами\n\n<i>Если я вас заинтересую, то просто нажмите на кнопку</i>",
+        "en": "<b>Hello, interested user!</b>\n\nThis is my bot, which is on my <a href='https://github.com/dmitruez'>github</a> it will give you more information about me than on the sites\n\n<strong>ALSO</strong> it will demonstrate my practical work with telegram bots\n\n<i>If I interest you, just click on the button</i>"
+      },
+      "text_question": {
+        "ru": "<b>Теперь задайте интересующий вас вопрос</b>\n\nБот доставит это сообщение до меня",
+        "en": "<b>Now ask the question you are interested in</b>\n\nThe bot will deliver this message to me"
+      }
     }
   }
 }
