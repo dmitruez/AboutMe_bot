@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-import json
+
 
 @dataclass
 class User:
@@ -17,24 +17,24 @@ class Button:
 	call_data: str
 
 
-class GroupButtons:
-	show_information = None
-	question_to_me = None
-	next_fact = None
-	previous_fact = None
-	reply_to_message = None
-	
+class ButtonsGroup:
+
 	def __init__(self, buttons: list[Button]):
 		for button in buttons:
-			if button.name == 'show_information':
-				self.show_information = button
-			elif button.name == 'question_to_me':
-				self.question_to_me = button
-			elif button.name == 'next_fact':
-				self.next_fact = button
-			elif button.name == 'previous_fact':
-				self.previous_fact = button
-			elif button.name == 'reply_to_message':
-				self.reply_to_message = button
-			else:
-				pass
+			list(self.__dir__()).append(button.name)
+			self.__setattr__(button.name, button)
+			
+
+
+@dataclass()
+class BotText:
+	name: str
+	ru: str
+	en: str
+
+class BotTextGroup:
+	
+	def __init__(self, bot_info: list[BotText]):
+		for text in bot_info:
+			list(self.__dir__()).append(text.name)
+			self.__setattr__(text.name, text)
