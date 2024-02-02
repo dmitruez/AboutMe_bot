@@ -1,30 +1,36 @@
 import json
+from entities import Button, User, GroupButtons
 
 
 class RepoJSON:
 	FILE = 'config.json'
 	
 	
-	def button_info(self, name: str, lang: str) -> tuple or str:
+	def buttons(self) -> GroupButtons:
+		buttons_list = []
 		with open(self.FILE, 'r', encoding='utf-8') as f:
-			data = json.load(f)['buttons'][name]
-			if lang == 'ru':
-				text = data['ru']
-				call_data = data['call_data']
+			data = json.load(f)['buttons']
+			for button in data:
+				a = Button(
+					name=button,
+					ru=data[button]['ru'],
+					en=data[button]['en'],
+					call_data=data[button]['call_data']
+					)
+				
+				buttons_list.append(a)
+			
+			buttons = GroupButtons(buttons_list)
+			
+		return buttons
 	
-			else:
-				text = data['en']
-				call_data = data['call_data']
-		
-		return call_data, text
-		
 	
 	def information(self, lang: str) -> list:
 		with open(self.FILE, 'r', encoding='utf-8') as f:
 			data = json.load(f)['information']
 			if lang == 'ru':
 				info = data['ru']
-	
+			
 			else:
 				info = data['en']
 		
@@ -43,7 +49,7 @@ class RepoJSON:
 			data = json.load(f)['about_bot']['greetings']
 			if lang == 'ru':
 				greetings = data['ru']
-	
+			
 			else:
 				greetings = data['en']
 		
@@ -62,8 +68,3 @@ class RepoJSON:
 		return question
 
 repo = RepoJSON()
-
-# print(repo.button_info('question_to_me', 'ru'))
-# print(repo.information('ru'))
-# print(repo.fist_greetings('ru'))
-# print(repo.token())
